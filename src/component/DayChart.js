@@ -60,7 +60,7 @@ class DayChart extends Component {
   }
 
     componentDidMount() {
-      fetch('http://127.0.0.1:5000/')
+      fetch('https://herokupy12p.herokuapp.com/')
          .then(res =>{
            return res.json()
          }).then(res => {

@@ -30,7 +30,7 @@ class WeekChart extends Component {
   }
 
     componentDidMount() {
-      fetch('http://127.0.0.1:5000/week')
+      fetch('https://herokupy12p.herokuapp.com/week')
          .then(res =>{
            return res.json()
          }).then(res => {

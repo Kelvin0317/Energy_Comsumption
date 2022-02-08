@@ -14,7 +14,7 @@ class MonthChart extends Component {
   }
 
     componentDidMount() {
-      fetch('http://127.0.0.1:5000/full')
+      fetch('https://herokupy12p.herokuapp.com/full')
          .then(res =>{
            return res.json()
          }).then(res => {
