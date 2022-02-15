@@ -28,8 +28,6 @@ class MonthChart extends Component {
      }
 
   render(){
-    // console.log(this.state.chartData.datasets[0]['data'])
-    // console.log(this.state.Data)
     
     return (
       <div className="chart">

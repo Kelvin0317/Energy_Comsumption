@@ -6,6 +6,7 @@ import PVChart from './component/PVChart';
 import TNBChart from './component/TNBChart';
 import ExportChart from './component/ExportChart';
 import TotalChart from './component/TotalChart';
+import CreateFile from './component/CreateFile';
 import Select from 'react-select';
 
 const options = [
@@ -16,6 +17,7 @@ const options = [
   { value: 'Ulitily-TNB (Power)', label: 'Ulitily-TNB (Power)' },
   { value: 'Utility Export (Power)', label: 'Utility Export (Power)' },
   { value: 'Total Power Demand', label: 'Total Power Demand' },
+  { value: 'Create File', label: 'Create File' },
 ];
 class App extends Component {
   
@@ -78,6 +80,10 @@ class App extends Component {
       this.state.chart = "EX"
       console.log(this.state.chart)
     }
+    if(selectedOption.value == "Create File"){
+      this.state.chart = "Create File"
+      console.log(this.state.chart)
+    }
   };
 
   render(){
@@ -109,6 +115,9 @@ class App extends Component {
         )}
         {this.state.chart == "Total Power Demand" && (
           <TotalChart/>    
+        )}
+        {this.state.chart == "Create File" && (
+          <CreateFile/>    
         )}
       </div>
     );
